@@ -14,7 +14,7 @@ My Hyprland configs and setup scripts :)
 Configure using the installed utility, nwg-displays. or "Displays Settings" in the installed app launcher.
 
 # KEYBINDS:
-!You can change keybinds in ~/.config/hypr/hyprland.conf!
+You can change keybinds in ~/.config/hypr/hyprland.conf!
 wofi:
   windows + R
 kitty (terminal):
