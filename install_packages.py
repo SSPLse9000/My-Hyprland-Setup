@@ -13,7 +13,7 @@ OPTIONAL_PACKAGES = {
     "cmus": "Console music player",
     "yazi": "Terminal file manager",
     "neovim": "Modern Vim-based editor",
-    "emote": "Emoji board"
+    "emote": "Emoji board",
     "nemo": "Graphical file manager",
 }
 
