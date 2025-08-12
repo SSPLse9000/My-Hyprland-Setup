@@ -1,0 +1,46 @@
+[opener]
+
+edit = [
+  { run = 'nvim "$@"', desc = "Neovim", block = true, for = "unix" }
+]
+
+play = [
+  { run = 'mpv "$@"', desc = "MPV", block = false, for = "unix" }
+]
+
+wine = [
+  { run = 'wine "$@"', desc = "Wine", block = true, for = "unix" }
+]
+
+python = [
+  { run = 'python3 "$@"', desc = "Python", block = true, for = "unix" }
+]
+
+bash = [
+  { run = 'bash "$@"', desc = "Bash", block = true, for = "unix" }
+]
+
+extract_zip = [
+  { run = 'mkdir -p "${1%.zip}" && unzip "$1" -d "${1%.zip}"', desc = "Extract ZIP", block = true, for = "unix" }
+]
+
+extract_rar = [
+  { run = 'mkdir -p "${1%.rar}" && unrar x "$1" "${1%.rar}/"', desc = "Extract RAR", block = true, for = "unix" }
+]
+
+pdf = [
+  { run = 'libreoffice "$@"', desc = "Libreoffice", block = true, for = "unix" }
+]
+
+[open]
+
+rules = [
+  { name = "*.py", use = "python" },
+  { name = "*.sh", use = "bash" },
+  { name = "*.pdf", use = "pdf" },
+  { mime = "text/*", use = "edit" },
+  { mime = "video/*", use = "play" },
+  { name = "*.exe", use = "wine" },
+  { name = "*.zip", use = "extract_zip" },
+  { name = "*.rar", use = "extract_rar" }
+]

@@ -1,0 +1,124 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "margin-bottom": 1,
+    "margin-top": 0,
+    "passthrough": false,
+    "height": 40,
+    "width": 1920,
+    "modules-left": [
+        "hyprland/workspaces",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "clock",
+	"cpu",
+        "temperature",
+	"memory",
+	"disk",
+        "tray",
+        "pulseaudio",
+        "battery",
+        "hyprland/language",
+    ],
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "ENG",
+        "format-ru": "РУС"
+    },
+    "hyprland/workspaces": {
+        "icon-size": 32,
+        "spacing": 16,
+        "on-scroll-up": "hyprctl dispatch workspace r+1",
+        "on-scroll-down": "hyprctl dispatch workspace r-1"
+    },
+    "custom/os_button": {
+        "format": "",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "max-length": 10
+    },
+    "temperature": {
+        "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+        "input-filename": "temp2_input",
+        "critical-threshold": 75,
+        "tooltip": false,
+        "format-critical": "({temperatureC}°C)",
+        "format": "({temperatureC}°C)"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "Disk:{percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "unit": "GB",
+        "tooltip-format":  "Available {free} of {total}"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "  {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "RAM - {used:0.1f}GiB used"
+    },
+    "wlr/taskbar": {
+        "format": "{icon} {title:.17}",
+        "icon-size": 20,
+        "spacing": 3,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "ignore-list": [],
+        "on-click": "activate"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 1
+    },
+    "clock": {
+	"format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "network": {
+        "format-wifi": " {icon}",
+        "format-ethernet": "  ",
+        "format-disconnected": "󰌙",
+        "format-icons": [
+            "󰤯 ",
+            "󰤟 ",
+            "󰤢 ",
+            "󰤢 ",
+            "󰤨 "
+        ]
+    },
+    "battery": {
+	"format": "{capacity}%",
+        "format-charging": "{capacity}%",
+        "format-plugged": "{capacity}%",
+        "format-alt": "{time}",
+        "format-icons": [
+        ]
+    },
+    "pulseaudio": {
+        "max-volume": 150,
+        "scroll-step": 10,
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    }
+}
