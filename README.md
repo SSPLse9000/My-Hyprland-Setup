@@ -1,6 +1,8 @@
 # My-Hyprland-Setup
 My Hyprland configs and setup scripts :)
 
+INSTALL THE REPO WITH: "git clone https://github.com/SSPLse9000/My-Hyprland-Setup"
+
 1. Run "install_packages.py"
 2. Run "restore_configs.py"
 3. Restart and you're finished!
