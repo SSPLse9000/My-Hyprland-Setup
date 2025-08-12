@@ -5,7 +5,7 @@ REQUIRED_PACKAGES = [
     "wofi",
     "python-pywal",
     "waybar",
-    "nwg-displays"
+    "nwg-displays",
     "swww",
 ]
 
