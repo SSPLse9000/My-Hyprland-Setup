@@ -7,6 +7,7 @@ REQUIRED_PACKAGES = [
     "waybar",
     "nwg-displays",
     "swww",
+    "kitty",
 ]
 
 OPTIONAL_PACKAGES = {
