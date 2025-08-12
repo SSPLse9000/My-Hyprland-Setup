@@ -5,6 +5,11 @@ My Hyprland configs and setup scripts :)
 2. Run "restore_configs.py"
 3. Restart and you're finished!
 
+# AUTOMATIC RICING SCRIPT:
+1. Make a wallpaper folder in ~/Downloads/
+2. Put any image file into the wallpaper folder
+3. Run "wallpaperT.py" -- This will theme your desktop to the colours of the wallpaper, as well as setting it as your background
+
 # HOW TO CONFIGURE MONITORS:
 Configure using the installed utility, nwg-displays. or "Displays Settings" in the installed app launcher.
 
